@@ -7,7 +7,7 @@
   </head>
   <body>
       <table border="3" style="color:navy">
-        <th onclick="SortBy()">First Name</th>
+        <th>First Name</th>
         <th>Last Name</th>
         <th>City</th>
         <tr ng-repeat="data in myData | orderBy: 'city' " style="color:black">
@@ -22,9 +22,4 @@
   </body>
   <script src="myApp.js"></script>
   <script src="myCtrl.js"></script>
-  <script>
-    function SortBy(){
-
-    }
-  </script>
 </html>
