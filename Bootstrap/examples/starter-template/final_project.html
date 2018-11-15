@@ -81,8 +81,20 @@
           </div>
           <div class="to_do">
             <h5 class="card-title">To Do</h5>
-            <p class="card-text1">With supporting text below as a natural lead-in to additional content.  <input type="checkbox" id="check1"></p>
-            <p class="card-text2">With supporting text below as a natural lead-in to additional content.  <input type="checkbox" id="check2"></p>
+            <p class="card-text1">
+              <div ng-app="myFinalApp" ng-controller="myFinalCtrl">
+                <br />
+                <table border="3" style="color:navy">
+                  <th>item</th>
+                  <th>completed</th>
+                  <tr ng-repeat="data in myData " style="color:black">
+                    <td>{{data.item}}</td>
+                    <td>{{data.finished}}</td>
+                  </tr>
+                </table>
+              </div>
+               <input type="checkbox" id="check1">
+             </p>
             <a href="#" class="btn btn-primary">Delete</a>
             <a href="#" class="btn btn-primary">Completed</a>
           </div>
