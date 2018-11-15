@@ -9,8 +9,8 @@
   $outp = "";
   while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
 
-      if ($rs["finished"] == "0"){
-        if ($outp != "") {$outp .= ",";}    
+      if ($rs["finished"] == "1"){
+        if ($outp != "") {$outp .= ",";}
         $outp .= '{"item":"'    . $rs["item"] . '"}';
       }
   }
