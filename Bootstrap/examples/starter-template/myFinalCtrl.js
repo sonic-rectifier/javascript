@@ -4,7 +4,7 @@ app.controller("myFinalCtrl", function($scope, $http) {
       $scope.myData = response.data.records;
     });
 
-    $http.get("readComplete.php").then(function (response) {
+    $http.get("readCompleted.php").then(function (response) {
       $scope.myCompletedData = response.data.records;
     });
 });
