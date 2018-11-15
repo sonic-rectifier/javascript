@@ -9,7 +9,7 @@ app.controller("myFinalCtrl", function($scope, $http) {
       // }
       for (var index = 0; index < $scope.myData.length; index ++  ){
         //if ($scope.myData.finished === 0){
-          $scope.ToDoItems.push($scope.myData[index]);
+          $scope.ToDoItems.push(index);
         //}
       }
 
