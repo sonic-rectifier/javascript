@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="" method="post">
+        <select id="dd" onchange="changeBackground();">
+          <option value="blue">Blue</option>
+          <option value="purple">Purple</option>
+          <option value="orange">Orange</option>
+          <option value="red"selected>Red</option>
+        </select>
+        <p id="test"></p>
+
+    </form>
+  </body>
+  <script>
+    function changeBackground(){
+      // get the drop down object
+      let dropDown = document.getElementById("dd");
+      // get the color value from the selected drop down option's value
+      let color = dropDown.options[dropDown.selectedIndex].value;
+      //test.innerHTML = color;
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+</html>

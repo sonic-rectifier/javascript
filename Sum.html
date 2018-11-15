@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <button onclick="sumPos()" type="button">Sum</button>
+      <button onclick="sumEven()" type="button">Sum Even</button>
+      <p id="onlyPos">Positive</p>
+      <p id="evenOnly">Even</p>
+  </body>
+  <script>
+    function sumPos(){
+      let numArray = [-1,5,10,-5,2,3];
+      let answer = 0;
+      let posField = document.getElementById('onlyPos');
+
+      for(iIndex=0; iIndex < numArray.length; iIndex++){
+        if (numArray[iIndex] > 0){
+          answer += numArray[iIndex];
+        }
+      }
+      posField.innerHTML = answer;
+    }
+    function sumEven(){
+      let numArray = [-1,5,10,-5,2,3];
+      let answer = 0;
+      let evenField = document.getElementById('evenOnly');
+
+      for(iIndex=0; iIndex < numArray.length; iIndex++){
+        if (numArray[iIndex] > 0 && numArray[iIndex] % 2 == 0){
+          answer += numArray[iIndex];
+        }
+      }
+      evenField.innerHTML = answer;
+    }
+  </script>
+</html>

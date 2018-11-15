@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload="hideAll()">
+    <div id="countryselect">
+      <label id="countryLabel">Country: </label>
+      <select id="countryOption" onchange="countryChanged()">
+          <option value="unitedStates"selected>United States</option>
+          <option value="ukraine" >Ukraine</option>
+      </select>
+    </div>
+    <br />
+    <div id="stateselect">
+      <label id="stateLabel">State: </label>
+      <input type="text" id ="statetxt"  placeholder="PA" onkeyup="stateSelected();">
+    </div>
+    <br />
+    <div id="cityselect">
+      <label id="cityLabel">City: </label>
+      <select name="cityOption">
+          <option value="stateCollege">State College</option>
+          <option value="lewistown">Lewistown</option>
+      </select>
+    </div>
+    <br />
+    <div id="provinceselect">
+      <label id="provincesLabel">Provinces: </label>
+      <select id="provincesOption" onchange="provinceChangged();">
+          <option value="lviv">Lviv</option>
+          <option value="none" selected>none</option>
+      </select>
+    </div>
+    <br />
+    <div id="ukcitselect">
+      <label id="ukcityLabel">City: </label>
+      <select name="ukcityOption">
+          <option value="lviv">lviv</option>
+      </select>
+    </div>
+
+  </body>
+  <script>
+    // first get all the div's for future use
+    let stateDiv = document.getElementById('stateselect');
+    let cityDiv = document.getElementById('cityselect');
+    let provinceDiv = document.getElementById('provinceselect');
+    let ukcitselectDiv = document.getElementById('ukcitselect');
+    let test = document.getElementById('test');
+
+    // function to handle province change
+    function provinceChangged(){
+      let provinceChoice = document.getElementById('provincesOption');
+      if (provinceChoice.value == "none"){
+        ukcitselectDiv.style.display = "none";
+      }else{
+        ukcitselectDiv.style.display = "block";
+      }
+    }
+    // function to show city
+    function showCities(){
+      cityDiv.style.display = "block";
+    }
+    // function to handle entry of state
+    function stateSelected(){
+        let stateText = document.getElementById('statetxt');
+        if (stateText.value == "PA" || stateText.value == "pa"){
+          showCities();
+        }else{
+          // hide if not the correct entry
+          cityDiv.style.display = "none";
+        }
+    }
+
+    // funcetion to handle coutry of origin change
+    function countryChanged(){
+      // first hide all of the divs then we'll figure out who to show
+      hideAll();
+
+      let countryDD = document.getElementById('countryOption');
+
+      if (countryDD.value == "unitedStates"){
+        stateDiv.style.display = "block";
+      }else {
+        provinceDiv.style.display = "block";
+      }
+    }
+
+    // function to hide all the divs on load of page
+    function hideAll(){
+      stateDiv.style.display = "none";
+      cityDiv.style.display = "none";
+      provinceDiv.style.display = "none";
+      ukcitselectDiv.style.display = "none";
+    }
+  </script>
+</html>

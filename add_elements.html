@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="add_elements.css">
+  </head>
+  <body>
+
+    <ul id="list">
+      <li id="element1">Lev</li>
+      <li id="element2">Roman</li>
+      <li id="element3">Spencer</li>
+    </ul>
+    <div class="btn" onclick="addElement()">Add Element</div>
+    <input type="text" type="text" id="txtBox" placeholder="Enter A Name">
+
+  </body>
+  <script type="text/javascript">
+    function addElement(){
+      let ul = document.getElementById("list");
+      let txtTextToAdd = document.getElementById("txtBox");
+      let li = document.createElement("li");
+      let numChildren = ul.children.length + 1;
+      li.setAttribute("id" , "element" + numChildren);
+      li.appendChild(document.createTextNode(txtTextToAdd.value) );
+      ul.appendChild(li);
+    }
+  </script>
+</html>
