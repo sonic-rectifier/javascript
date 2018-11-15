@@ -7,7 +7,14 @@
   </head>
   <body>
     <div ng-app="myApp" ng-controller="myCtrl">
-      <!-- My name is {{ (firstName + " " + lastName) | uppercase }} -->
+      <table border="3" style="color:navy">
+        <th>col 1</th>
+        <th>col 2</th>
+        <tr ng-repeat="data in myData " style="color:black">
+          <td>{{data.item}}</td>
+          <td>{{data.finished}}</td>
+        </tr>
+      </table>
       <br />
       <!-- <table border="3" style="color:navy">
         <th>First Name</th>
@@ -20,14 +27,7 @@
 
         </tr>
       </table> -->
-      <table border="3" style="color:navy">
-        <th>col 1</th>
-        <th>col 2</th>
-        <tr ng-repeat="data in myData " style="color:black">
-          <td>{{data.item}}</td>
-          <td>{{data.finished}}</td>
-        </tr>
-      </table>
+
     </div>
   </body>
   <script src="myApp.js"></script>
