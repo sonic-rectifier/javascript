@@ -86,12 +86,14 @@
                 <br />
                 <table>
                   <tr ng-repeat="data in myData " style="color:black">
-                    <td>{{data.item}}</td>
-                  
+                    if ({{data.finished}} == "0"){
+                      <td>{{data.item}}</td> <input type="checkbox" id="check1">
+                    }
+
                   </tr>
                 </table>
               </div>
-               <input type="checkbox" id="check1">
+
              </p>
             <a href="#" class="btn btn-primary">Delete</a>
             <a href="#" class="btn btn-primary">Completed</a>
