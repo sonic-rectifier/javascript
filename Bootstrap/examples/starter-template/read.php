@@ -8,9 +8,10 @@
 
   $outp = "";
   while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
+    if ($rs["finished"] == "1"){
       if ($outp != "") {$outp .= ",";}
-      $outp .= '{"item":"'    . $rs["item"] . '",';
-      $outp .= '"finished":"' . $rs["finished"]. '"}';
+      $outp .= '{"item":"'    . $rs["item"] . '"}';
+    }
   }
   $outp ='{"records":['.$outp.']}';
   $conn->close();
