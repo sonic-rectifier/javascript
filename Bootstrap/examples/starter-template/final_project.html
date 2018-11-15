@@ -8,7 +8,7 @@
     <link rel="icon" href="../../../../favicon.ico">
 
     <title>To Do List</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -64,7 +64,6 @@
             This is a header
           </div> -->
           <div ng-app="myFinalApp" ng-controller="myFinalCtrl">
-            <!-- My name is {{ (firstName + " " + lastName) | uppercase }} -->
             <br />
             <table border="3" style="color:navy">
               <th>item</th>
@@ -72,7 +71,6 @@
               <tr ng-repeat="data in myData " style="color:black">
                 <td>{{data.item}}</td>
                 <td>{{data.finished}}</td>
-
               </tr>
             </table>
           </div>
