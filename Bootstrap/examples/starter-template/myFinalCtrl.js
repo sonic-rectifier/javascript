@@ -13,7 +13,7 @@ app.controller("myFinalCtrl", function($scope, $http) {
         //}
       }
 
-      $scope.ToDoItems = $scope.myData[0];
+      $scope.ToDoItems = $scope.myData.item;
 
     });
 });
