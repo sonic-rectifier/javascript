@@ -90,16 +90,24 @@
                   </tr>
                 </table>
               </div>
-
              </p>
             <a href="#" class="btn btn-primary">Delete</a>
             <a href="#" class="btn btn-primary">Completed</a>
           </div>
           <div class="completed">
             <h5 class="card-title">Completed</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Delete</a>
+            <p class="card-text1">
+              <div >
+
+              <br />
+                <table>
+                  <tr ng-repeat="data in myCompletedData" style="color:black">
+                      <td>{{data.item}} <input type="checkbox" id="check1"></td>
+                  </tr>
+                </table>
+              </div>
+             </p>
+             <a href="#" class="btn btn-primary">Delete</a>
             <a href="#" class="btn btn-primary">Completed</a>
           </div>
 
