@@ -9,10 +9,12 @@ app.controller("myFinalCtrl", function($scope, $http) {
     });
 
     $scope.add = function(){
+
                $http({
                method: 'post',
                url: 'add.php',
-               data: {item:$scope.item_to_add_text},
+               //data: {item:$scope.item_to_add_text},
+               data: {item:"test"},
 
                }).then(function successCallback(response) {
                    $scope.users.push(response.data[0]);
