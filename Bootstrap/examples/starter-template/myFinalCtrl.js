@@ -9,8 +9,8 @@ app.controller("myFinalCtrl", function($scope, $http) {
     });
 
     $scope.add = function(){
-              alert("entered add");
-              alert($scope.item_to_add_text);
+              //alert("entered add");
+            //  alert($scope.item_to_add_text);
                $http({
                method: 'post',
                url: 'add.php',
@@ -18,7 +18,8 @@ app.controller("myFinalCtrl", function($scope, $http) {
                data: {item:"test"},
 
                }).then(function successCallback(response) {
-                   $scope.myData.push(response.data[0]);
+                  // $scope.myData.push(response.data[0]);
+                  $scope.myData.push($scope.item_to_add_text);
                });
            }
 
