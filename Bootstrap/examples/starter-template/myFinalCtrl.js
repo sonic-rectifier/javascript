@@ -22,7 +22,7 @@ app.controller("myFinalCtrl", function($scope, $http) {
            }
 
      $scope.delete = function(){
-
+                alert("test");
                 $http({
                 method: 'delete',
                 url: 'delete.php',
@@ -32,6 +32,6 @@ app.controller("myFinalCtrl", function($scope, $http) {
                 }).then(function successCallback(response) {
                     $scope.myData.push(response.data[0]);
                 });
-            }           
+            }
 
 });
