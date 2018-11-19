@@ -22,7 +22,7 @@ app.controller("myFinalCtrl", function($scope, $http) {
            }
 
      $scope.delete = function(){
-                alert("test");
+            
                 $http({
                 method: 'delete',
                 url: 'delete.php',
