@@ -9,6 +9,7 @@ app.controller("myFinalCtrl", function($scope, $http) {
     });
 
     $scope.add = function(){
+              alert("entered add");
               alert($scope.item_to_add_text);
                $http({
                method: 'post',
@@ -22,7 +23,7 @@ app.controller("myFinalCtrl", function($scope, $http) {
            }
 
      $scope.delete = function(){
-
+                alert("entered delete");
                 $http({
                 method: 'delete',
                 url: 'delete.php',
