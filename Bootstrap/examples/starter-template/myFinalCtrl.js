@@ -21,4 +21,17 @@ app.controller("myFinalCtrl", function($scope, $http) {
                });
            }
 
+     $scope.delete = function(){
+
+                $http({
+                method: 'delete',
+                url: 'delete.php',
+                //data: {item:$scope.item_to_add_text},
+                data: {item:"test"},
+
+                }).then(function successCallback(response) {
+                    $scope.myData.push(response.data[0]);
+                });
+            }           
+
 });
