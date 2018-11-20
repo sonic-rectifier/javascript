@@ -23,12 +23,17 @@ app.controller("myFinalCtrl", function($scope, $http) {
            }
 
      $scope.delete = function(){
+                let checkBoxes = document.getElementsByClassName('not_completed');
+                for (var index = 0; index < checkBoxes.length; ++index) {
+                  alert(checkBoxes[index].checked);
+                }
+
                 $http({
                 method: 'post',
                 url: 'delete.php',
                 //data: {item:$scope.item_to_add_text},
                 data: {item:"test"},
-              
+
                 }).then(function successCallback(response) {
                   //  $scope.myData.push(response.data[0]);
                 });
