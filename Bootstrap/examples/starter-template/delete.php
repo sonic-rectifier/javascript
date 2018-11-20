@@ -9,7 +9,7 @@
   $conn = new mysqli("localhost", "galen", "southhills#", "galen");
 
 //  $result = $conn->query("delete from users where item=".$delItem );
-  $result = $conn->query("delete from to_do_list where item='test item 1'" );
+  $result = $conn->query("delete from to_do_list where item='$delItem'" );
 
   $conn->close();
 
