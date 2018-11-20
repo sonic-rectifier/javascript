@@ -23,7 +23,8 @@ app.controller("myFinalCtrl", function($scope, $http) {
                 let checkBox = document.getElementsByTagName('not_completed');
 
                 for (var index = 0; index < checkBox.length; ++index) {
-                  alert(tableRow.parentElement.children[1].);
+                  alert("test");
+                  //alert(tableRow.parentElement.children[1].);
                 }
 
                 $http({
