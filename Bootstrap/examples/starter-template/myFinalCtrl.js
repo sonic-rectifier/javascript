@@ -28,9 +28,7 @@ app.controller("myFinalCtrl", function($scope, $http) {
                 url: 'delete.php',
                 //data: {item:$scope.item_to_add_text},
                 data: {item:"test"},
-                angular.forEach(myData, function(value, key) {
-                    alert(value);
-                }
+              
                 }).then(function successCallback(response) {
                   //  $scope.myData.push(response.data[0]);
                 });
