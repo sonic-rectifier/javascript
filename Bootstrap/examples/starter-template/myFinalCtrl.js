@@ -9,8 +9,6 @@ app.controller("myFinalCtrl", function($scope, $http) {
     });
 
     $scope.add = function(){
-               alert("entered add");
-               alert($scope.item_to_add_text);
                $http({
                method: 'post',
                url: 'add.php',
@@ -22,12 +20,11 @@ app.controller("myFinalCtrl", function($scope, $http) {
            }
 
      $scope.delete = function(){
-                alert("entered delete");
-                // let tableRow = document.getElementsByClassName('not_completed');
-                // for (var index = 0; index < tableRow.length; ++index) {
-                //   alert ("index")
-                //   alert(tableRow.children[1]);
-                // }
+                let tableRow = document.getElementsByClassName('not_completed');
+                for (var index = 0; index < tableRow.length; ++index) {
+                  alert ("index")
+                  alert(tableRow.children[1]);
+                }
 
                 $http({
                 method: 'post',
