@@ -34,7 +34,7 @@ app.controller("myFinalCtrl", function($scope, $http) {
                 method: 'post',
                 url: 'delete.php',
                 //data: {item:$scope.item_to_add_text},
-                data: {item:"test"},
+                data: {item:"eggs"},
 
                 }).then(function successCallback(response) {
                     $scope.myData.push(response.data[0]);
