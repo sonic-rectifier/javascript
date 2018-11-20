@@ -37,7 +37,7 @@ app.controller("myFinalCtrl", function($scope, $http) {
                 data: {item:"test"},
 
                 }).then(function successCallback(response) {
-                  //  $scope.myData.push(response.data[0]);
+                    $scope.myData.push(response.data[0]);
                 });
             }
 
