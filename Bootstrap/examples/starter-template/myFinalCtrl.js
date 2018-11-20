@@ -17,6 +17,7 @@ app.controller("myFinalCtrl", function($scope, $http) {
                data: {item:$scope.item_to_add_text},
 
                }).then(function successCallback(response) {
+                 alert("entered add");
                   $scope.myData.push(response.data[0]);
                });
            }
