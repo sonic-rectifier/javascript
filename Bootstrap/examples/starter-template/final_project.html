@@ -72,8 +72,8 @@
               <div >
                 <br />
                 <table>
-                  <tr class="not_completed" ng-repeat="data in myData" style="color:black">
-                      <td>{{data.item}} <input type="checkbox" id="check"+$index></td>
+                  <tr  ng-repeat="data in myData" style="color:black">
+                      <td class="not_completed">{{data.item}} <input type="checkbox" id="check"+$index></td>
                   </tr>
                 </table>
               </div>
