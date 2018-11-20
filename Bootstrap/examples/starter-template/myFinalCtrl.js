@@ -20,10 +20,10 @@ app.controller("myFinalCtrl", function($scope, $http) {
            }
 
      $scope.delete = function(){
-                let tableRow = document.getElementsByClassName('not_completed');
-
-                for (var index = 0; index < tableRow.length; ++index) {
-                  alert(tableRow.children[1]);
+                let checkBox = document.getElementsByTagName('checkbox');
+                alert(checkBox.length);
+                for (var index = 0; index < checkBox.length; ++index) {
+                //  alert(tableRow.parentElement.children[1].);
                 }
 
                 $http({
