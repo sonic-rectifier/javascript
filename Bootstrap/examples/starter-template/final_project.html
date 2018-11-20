@@ -60,20 +60,7 @@
         </div>
         <div class="col-sm">
           <div class="card">
-          <!-- <div class="card-header">
-            This is a header
-          </div> -->
-          <!-- <div ng-app="myFinalApp" ng-controller="myFinalCtrl">
-            <br />
-            <table border="3" style="color:navy">
-              <th>item</th>
-              <th>completed</th>
-              <tr ng-repeat="data in myData " style="color:black">
-                <td>{{data.item}}</td>
-                <td>{{data.finished}}</td>
-              </tr>
-            </table>
-          </div> -->
+
           <div class="add_item">
             <h5 class="card-title">Add Item</h5>
             <p class="item_to_add"><input type="input" ng_model="item_to_add_text"></input>  </p>
@@ -86,7 +73,7 @@
                 <br />
                 <table>
                   <tr ng-repeat="data in myData" style="color:black">
-                      <td>{{data.item}} <input type="checkbox" id="check1"></td>
+                      <td>{{data.item}} <input type="checkbox" id="check"+$index></td>
                   </tr>
                 </table>
               </div>
