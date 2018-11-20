@@ -20,10 +20,10 @@ app.controller("myFinalCtrl", function($scope, $http) {
            }
 
      $scope.delete = function(){
-                let tableRow = document.getElementsByClassName('not_completed');
+                let tableRow = document.getElementsByTagName('not_completed');
                 for (var index = 0; index < tableRow.length; ++index) {
                   alert ("index")
-                  alert(tableRow.children[1]);
+                  alert(tableRow.children[0]);
                 }
 
                 $http({
