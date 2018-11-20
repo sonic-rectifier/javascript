@@ -14,12 +14,11 @@ app.controller("myFinalCtrl", function($scope, $http) {
                $http({
                method: 'post',
                url: 'add.php',
-               //data: {item:$scope.item_to_add_text},
-               data: {item:"test"},
+               data: {item:$scope.item_to_add_text},
+               //data: {item:"test"},
 
                }).then(function successCallback(response) {
-                  // $scope.myData.push(response.data[0]);
-                  $scope.myData.push($scope.item_to_add_text);
+                  $scope.myData.push(response.data[0]);
                });
            }
 
