@@ -25,7 +25,7 @@ app.controller("myFinalCtrl", function($scope, $http) {
      $scope.delete = function(){
                 alert("entered delete");
                 $http({
-                method: 'delete',
+                method: 'post',
                 url: 'delete.php',
                 //data: {item:$scope.item_to_add_text},
                 data: {item:"test"},
