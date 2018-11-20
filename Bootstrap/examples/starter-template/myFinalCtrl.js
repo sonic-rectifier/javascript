@@ -9,15 +9,14 @@ app.controller("myFinalCtrl", function($scope, $http) {
     });
 
     $scope.add = function(){
-              alert("entered add");
-            //  alert($scope.item_to_add_text);
+               alert("entered add");
+               alert($scope.item_to_add_text);
                $http({
                method: 'post',
                url: 'add.php',
                data: {item:$scope.item_to_add_text},
 
                }).then(function successCallback(response) {
-                 alert("entered add");
                   $scope.myData.push(response.data[0]);
                });
            }
